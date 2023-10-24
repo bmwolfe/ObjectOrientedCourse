@@ -1,0 +1,61 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package bankingcodewolfe;
+
+import java.util.Scanner;
+/**
+ *
+ * @author brendonm.wolfe
+ */
+public class AcemeBank {
+    
+    private double deposit;
+    private double withDr;
+    private double balance;
+    private String name;
+    private long acctNum;
+    
+public AcemeBank(){
+    name = "N/A";
+}
+    
+public AcemeBank(String OwnName, long account, double initDep)
+{
+    name = OwnName;
+    acctNum = account;
+    balance = initDep;
+}
+
+public void makeDeposit(double dep)
+{
+    balance = balance + dep;
+}
+
+public void makeWith(double wth)
+{
+    balance = balance - wth;
+}
+
+public double getBalance()
+{
+    return balance;
+}
+public String getName()
+{
+    return name;
+}
+public void setName(String name)
+{
+    this.name = name;
+}
+    
+public String toString()
+{
+    return "Name: " + name
+            + "\nAccount: " + acctNum
+            + "\nBalance: " + balance;
+
+}
+}
