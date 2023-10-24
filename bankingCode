@@ -1,0 +1,42 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package bankingcodewolfe;
+
+import java.util.Scanner;
+/**
+ *
+ * @author brendonm.wolfe
+ */
+public class BankingCodeWolfe {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner scan = new Scanner(System.in);
+        
+        AcemeBank bank = new AcemeBank("Bob Smith", 12345, 100.50);
+scan.nextLine(), scan.nextLong(), scan.nextDouble()
+        /*System.out.println(bank.getName());
+        
+        bank.setName("Bob Smith");
+        System.out.println(bank.getName()); */
+        
+        System.out.println("Initial Account Info");
+        System.out.println(bank.toString());
+        System.out.println("\nEnter amount to deposit into account: " );
+        bank.makeDeposit(scan.nextDouble());
+        System.out.println("Enter amount to withdraw from account: " );
+        bank.makeWith(scan.nextDouble());
+        System.out.println("\nNew Account Info");
+        System.out.println(bank.toString());
+        
+        
+    }
+    
+    
+    
+}
